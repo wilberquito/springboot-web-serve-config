@@ -44,6 +44,56 @@ public class WebConfiguration implements WebMvcConfigurer {
                 });
     }
 
+    /*
+    //you can configure Handle interceptor to be applied to all incoming requests or to specifics URL
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(this.authenticationInterceptor)
+                .addPathPatterns("/**").order(Ordered.HIGHEST_PRECEDENCE)
+                .excludePathPatterns(
+                        "/database",
+                        "/sexes",
+                        "/rols-hc3",
+                        "/documents",
+                        "/especialitats",
+                        "/",
+                        "/app",
+                        "/app/**",
+                        "/getConfig/**",
+                        "/error",
+                        "/*.ico",
+                        "/index.html",
+                        "/*.js",
+                        "/*.ttf",
+                        "/*.woff2",
+                        "/*.css");
+        registry.addInterceptor(this.auditableInterceptor)
+                .addPathPatterns("/**").order(Ordered.LOWEST_PRECEDENCE)
+                .excludePathPatterns(
+                        "/database",
+                        "/sexes",
+                        "/rols-hc3",
+                        "/documents",
+                        "/especialitats",
+                        "/recursos-consultes-externes/{id}",
+                        "/",
+                        "/app",
+                        "/app/**",
+                        "/login",
+                        "/auth/login",
+                        "/getConfig/**",
+                        "/error",
+                        "/*.ico",
+                        "/index.html",
+                        "/*.js",
+                        "/*.ttf",
+                        "/*.woff2",
+                        "/*.css");
+    }
+
+
+     */
+
 
     /** configuración para fuera del localhost o red local **/
     @Bean
