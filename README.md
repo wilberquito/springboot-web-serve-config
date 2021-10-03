@@ -1,5 +1,5 @@
 # springboot-web-serve-config
-Configuración en spring para servir contenido statico web
+Configuración bàsicas de un servidor en SpringBoot
 
 - Configuración de CORS 
 - Configuración de interceptors
